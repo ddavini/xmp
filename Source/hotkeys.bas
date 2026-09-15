@@ -74,7 +74,7 @@ End Function
 
 Public Sub frmHotKey(KeyAscii As Integer)
   Select Case KeyAscii
-    Case Asc("p") 'Paly
+    Case Asc("p") 'Play
         Call HotKeyRoutine(0)
     Case Asc("s") 'Stop
         Call HotKeyRoutine(1)
@@ -107,7 +107,7 @@ Public Sub HotKeyRoutine(ByVal KeyID As Byte)
 On Error GoTo ErrH
   
   Select Case KeyID
-    Case 0 'Paly
+    Case 0 'Play
       Call PlayStream(frmListone.ListaMp3.ListIndex)
     Case 1 'Stop
       Call StopAll
@@ -186,7 +186,7 @@ On Error GoTo ErrH
           End If
         Next
         Pause
-        ' VB puo' crashare
+        ' VB puo' crashare / VB can crash
         SetWindowLong hWnd, GWL_WNDPROC, _
            g_lngOldWindowProc
         Pause 0.9

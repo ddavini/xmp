@@ -302,7 +302,7 @@ On Error GoTo ErrH
         End If
     End With
     
-    'Scarico frmInfo che salcazzo perche' si carica
+    'Scarico frmInfo che salcazzo perche' si carica / Unload frmInfo - who the hell knows why it gets loaded
     Unload frmInfo
     
 ErrH:
@@ -523,7 +523,7 @@ On Error GoTo ErrH
                         Line Input #FileNumber, Mp3FileTmp
                         Line Input #FileNumber, strListaMp3
                         
-                        'Per mantenere la comp'
+                        'Per mantenere la comp' / To maintain compatibility
                         Mp3FileTmp = Replace$(Mp3FileTmp, Chr(34), "")
                         strListaMp3 = Replace$(strListaMp3, Chr(34), "")
                         '''''''''''''''''''''''
@@ -766,7 +766,7 @@ On Error GoTo ErrH
         If frmMenu.InPrimoPianoFlag Then
             frmMenu.InPrimoPiano_Click
         End If
-        'Forse da mettere insieme
+        'Forse da mettere insieme / Maybe these should be grouped together
         sCFG = GetINI(cfgFile, "POS.INFO", "COSC", "True")
         SetCardioOSCVisibile CBool(sCFG)
         sCFG = GetINI(cfgFile, "POS.INFO", "ANALYZER", "False")
@@ -776,17 +776,17 @@ On Error GoTo ErrH
         sCFG = GetINI(cfgFile, "POS.INFO", "CPULESS", "False")
         xmp.ImgLogo.Visible = CBool(sCFG)
         '''
-        'Provvisorio Qui
+        'Provvisorio Qui / Temporary here
         sCFG = GetINI(cfgFile, "POS.INFO", "VOLUME", "25")
         If CInt(sCFG) <> xmp.xmsVol.xMin Then
             xmp.xmsVol.xValue = xmp.xmsVol.xMax - CInt(sCFG)
         Else
             xmp.xmsVol.xValue = xmp.xmsVol.xMax - (xmp.xmsVol.xMax \ 4)
         End If
-        'Mp3 di cui e' stata salvata la posizione
+        'Mp3 di cui e' stata salvata la posizione / Mp3 whose position was saved
         sCFG = GetINI(cfgFile, "POS.INFO", "LASTMP3", "")
         gPosForSave.Mp3File = sCFG
-        'Posizione Mp3
+        'Posizione Mp3 / Mp3 position
         sCFG = GetINI(cfgFile, "POS.INFO", "POS", "0")
         gPosForSave.SamplePos = sCFG
                 
@@ -822,7 +822,7 @@ On Error GoTo ErrH
         Call SetINI(cfgFile, "POS.INFO", "SPECTRUMMODE", CStr(GlobalSpectrumeMode))
         Call SetINI(cfgFile, "POS.INFO", "CPULESS", CStr(xmp.ImgLogo.Visible))
         '''
-        'Provvisorio Qui
+        'Provvisorio Qui / Temporary here
         Call SetINI(cfgFile, "POS.INFO", "VOLUME", CStr(xmp.xmsVol.xMax - xmp.xmsVol.xValue))
         If GetFile(IndiceGlobalissimo) <> "" And GetINI(cfgFile, "PREFERENCE", "SSTREAMPOS", 0) _
             And mStreamPos <> mStreamLen Then
@@ -990,7 +990,7 @@ End Function
 Public Sub SettaIndicatoreModo(Optional Azzera As Boolean)
 On Error GoTo ErrH
     
-    '0 mono 1 stereo -1 Azzerato
+    '0 mono 1 stereo -1 Azzerato / 0 mono, 1 stereo, -1 reset
     If Azzera = True Then
         xmp.picModo.Picture = LoadResPicture("MODO0", vbResBitmap)
         Modo = TipoModo.Azzerato
@@ -1122,8 +1122,8 @@ On Error GoTo ErrH
             Wend
         Next
     End If
-    'Gestione numeri romani maggiori di una lettera fino a X (provvisoria)
-    'Oltre hai numeri si puo estendelo anche alle sigle credo ???
+    'Gestione numeri romani maggiori di una lettera fino a X (provvisoria) / Handling of roman numerals longer than one letter, up to X (temporary)
+    'Oltre ai numeri si puo estenderlo anche alle sigle credo ??? / Beyond the numbers this could probably be extended to abbreviations too, I think???
     Dim NumeroDeRoma() As Variant
     NumeroDeRoma = Array("Iii", "Ii", "Iv", "Vi", "Viiii", "Viii", "Vii")
     For J = 0 To UBound(NumeroDeRoma)

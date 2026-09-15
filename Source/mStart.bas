@@ -1,7 +1,7 @@
 Attribute VB_Name = "mStart"
 Option Explicit
 
-'Da spostare nel Mod API'
+'Da spostare nel Mod API' / To move into the Mod API
 Private Declare Function CoLockObjectExternal Lib "ole32" ( _
     ByVal pUnk As IUnknown, ByVal fLock As Long, _
     ByVal fLastUnlockReleases As Long) As Long

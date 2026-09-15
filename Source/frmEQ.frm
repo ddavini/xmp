@@ -85,7 +85,7 @@ Begin VB.Form frmEQ
    Begin VB.OptionButton optEQ 
       Appearance      =   0  'Flat
       BackColor       =   &H00000000&
-      Caption         =   "Nomal"
+      Caption         =   "Normal"
       BeginProperty Font 
          Name            =   "Arial"
          Size            =   8.25
@@ -315,7 +315,7 @@ Private Sub Form_Deactivate()
 End Sub
 
 Private Sub Form_Load()
-On erroro GoTo errH:
+On Error GoTo errH:
     Dim I As Integer
     Dim aFreq() As Variant
     

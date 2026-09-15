@@ -55,7 +55,7 @@ On Error GoTo ErrH
         Salva = NomeMp3
         If Len(Salva) > MaxChar Then
             Select Case Modo
-                Case Is = 0 'Indietro Avanti
+                Case Is = 0 'Indietro Avanti / Backward Forward
                     MaxChar = MaxChar \ 2
                     For I = 0 To Len(Salva) - MaxChar
                         Elabo = Right$(Salva, Len(Salva) - I)
@@ -66,12 +66,12 @@ On Error GoTo ErrH
                         RaiseEvent ScorriLabelNomeMp3Event(Right$(Salva, Len(Salva) - I))
                         Pause LungPausa, True
                     Next
-                Case Is = 1 'Scrittura una lettera alla volta
+                Case Is = 1 'Scrittura una lettera alla volta / Writing one letter at a time
                     For I = Len(Salva) To 0 Step -1
                         RaiseEvent ScorriLabelNomeMp3Event(Left$(Salva, Len(Salva) - I))
                         Pause LungPausa, True
                     Next
-                Case Is = 2 'Scrittura una lettera alla volta avanti indre'
+                Case Is = 2 'Scrittura una lettera alla volta avanti indre' / Writing one letter at a time, forward and backward
                     For I = 0 To Len(Salva)
                         RaiseEvent ScorriLabelNomeMp3Event(Left$(Salva, Len(Salva) - I))
                         Pause LungPausa, True

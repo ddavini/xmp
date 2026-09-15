@@ -12,7 +12,7 @@ Attribute VB_Name = "mDragList"
 'file that accompanies this module.
 '
 'If you compile this contol into an OCX, please RENAME IT before you distribute it
-'due to version compatibilty issues.
+'due to version compatibility issues.
 '
 'If you make modifications to this draglist, please send them to me at bghost@ti.cz
 

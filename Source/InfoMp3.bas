@@ -5,7 +5,7 @@ Option Explicit
 'http://home12.iNet.tele.dk/mkaratha   '
 ''''''''''''''''''''''''''''''''''''''''
 
-'Pesantemente riveduto
+'Pesantemente riveduto / Heavily revised
 
 Private Type WAVEFORMATEX
     wFormatTag As Long
@@ -62,7 +62,7 @@ Public Type Mp3Info
 End Type
 
 Private GetMP3Info As Mp3Info
-'Buffer di immagazzinamento dell'Header
+'Buffer di immagazzinamento dell'Header / Header storage buffer
 Private X() As Byte
 Private MaxCapa As Long
 
@@ -540,7 +540,7 @@ On Error GoTo ErrH
            "Rhythmic Soul", "Freestyle", "Duet", "Punk Rock", "Drum Solo", "A Cappella", _
            "Euro - House", "Dance Hall", "Goa", "Drum & bass", "Club - House", "Hardcore", "Terror", "Indie", "BritPop", _
            "negerpunk", "Polsk Punk", "Beat", "Christian Gangsta Rap", "Heavy Metal", "Black Metal", "Crossover", _
-           "Contemporary Christian", "Christian Rock", "Merengue", "Salsa", "Trash Metal", "Anime", "JPop", "SynthPop")
+           "Contemporary Christian", "Christian Rock", "Merengue", "Salsa", "Thrash Metal", "Anime", "JPop", "SynthPop")
         GenreText = Matrix(Index)
     End If
 ErrH:

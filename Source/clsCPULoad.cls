@@ -345,7 +345,7 @@ On Error GoTo ErrH:
         If Not m_bW9xCollecting Then
             R = RegOpenKeyEx(HKEY_DYN_DATA, "PerfStats\StartStat", 0&, KEY_ALL_ACCESS, H)
             If R <> ERROR_SUCCESS Then
-                Err.Raise Err_UnableToStartPerfmon, ClassName & ".CollectCPRData()", "Unable to start performance monitoring"
+                Err.Raise Err_UnableToStartPerfmon, ClassName & ".CollectCPUData()", "Unable to start performance monitoring"
             End If
             
             Call RegQueryValueEx(H, "KERNEL\CPUUsage", 0&, REG_DWORD, m_lW9xCpuUsage, LenB(m_lW9xCpuUsage))

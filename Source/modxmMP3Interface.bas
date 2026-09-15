@@ -194,7 +194,7 @@ On Error GoTo ErrH
     If Not CBool(GetINI(cfgFile, "XMMP3", "NOCALLBACK", "FALSE")) Then
         If xmMP3_callback(AddressOf xmMP3_Proc) = False Then
             Call Err.Raise(vbError, "modxmMP3Interface", _
-            "CallBack link error, Please contact the autor")
+            "CallBack link error, Please contact the author")
         End If
     End If
                

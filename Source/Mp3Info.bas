@@ -15,7 +15,7 @@ Attribute VB_Name = "Mp3Info"
 '''Created By Michael Karathanasis 990728'''''''''''''''''''''
 '''Now support for variable bit rate'''
 '''please report improvements to http://home12.inet.tele.dk/mkaratha
-'''User may use or distrubute the code without restrictions
+'''User may use or distribute the code without restrictions
 'Sample how to use:
 
 'Dim filename as string

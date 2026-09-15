@@ -579,7 +579,7 @@ End Sub
 
 Private Sub mnuFileNew_Click()
 If Saved = False Then
-    If MsgBox("Do you want save your changes to the current document?", vbCritical + vbYesNo, frmMain.Caption) = vbYes Then
+    If MsgBox("Do you want to save your changes to the current document?", vbCritical + vbYesNo, frmMain.Caption) = vbYes Then
         If OpenedFile = "" Then
             mnuSaveAs_Click
         Else

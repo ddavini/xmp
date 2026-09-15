@@ -289,7 +289,7 @@ On Error Resume Next
     
 ErrH:
     If Err.Number <> 0 Then
-        Call DisplayError("Preference Menu Can't Create Please refer to de Autor for This Problem!")
+        Call DisplayError("Preference Menu Can't Be Created. Please refer to the Author for This Problem!")
         Call ScriviLOG(Err.Source & ".Menu.mnuPreference_Click", Err.Number, Err.Description)
         xmp.Enabled = True
         frmListone.Enabled = True

@@ -104,11 +104,11 @@ Event MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)
 'Private Sub CommandImg_Click(Index As Integer)
 '    If MouseUp Then
 '        Select Case Index
-'            Case Is = 1 'Giu'
+'            Case Is = 1 'Giu' / Down
 '                If vsGhost.Value < vsGhost.Max Then
 '                    vsGhost.Value = vsGhost.Value + 1
 '                End If
-'            Case Is = 0 'Su
+'            Case Is = 0 'Su / Up
 '                If vsGhost.Value > vsGhost.Min Then
 '                    vsGhost.Value = vsGhost.Value - 1
 '                End If
@@ -121,7 +121,7 @@ Private Sub CommandImg_MouseDown(Index As Integer, Button As Integer, Shift As I
         Call xIlluminaPulsante(CommandImg(Index), True)
         MouseUp = False
         Select Case Index
-            Case Is = 1 'Giu'
+            Case Is = 1 'Giu' / Down
                 While Not MouseUp
                     If vsGhost.Value < vsGhost.Max Then
                         vsGhost.Value = vsGhost.Value + 1
@@ -132,7 +132,7 @@ Private Sub CommandImg_MouseDown(Index As Integer, Button As Integer, Shift As I
                     P = P + (GetIni(cfgFile, "PREFERENCE", "SLIDEACCEL", "1") / 1000)
                     Call Pause(0.2 - P, True)
                 Wend
-            Case Is = 0 'Su
+            Case Is = 0 'Su / Up
                 Do
                     If vsGhost.Value > vsGhost.Min Then
                         vsGhost.Value = vsGhost.Value - 1

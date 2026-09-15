@@ -26,13 +26,13 @@ W2k3 Full Patch (21/08/2003)
 (TASKM CPU% CPULESS  07%)
 
 
-Istallation Note.
+Installation Note.
 
 1 - For Upgrade the release older than beta 2 kill the XmP Directory and install the last package.
 
 2 - For advanced user i have introduced _Muten_ ini editor for easy edit xmp.ini file. Massive comments of the ini options are under developement.
 
-Kown bug:
+Known bug:
 SoftVolume Set Lag
 Create ShotCut do not work under W2k3
 

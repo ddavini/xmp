@@ -17,7 +17,7 @@ On Error GoTo ErrH
         End
     End If
     
-    'Setta file CFG
+    'Setta file CFG / Set CFG file
     cfgFile = App.Path + "\xmp.ini"
     Call LeggiCFG
        

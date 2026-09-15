@@ -550,7 +550,7 @@ On Error GoTo ErrH
     LockButton = False
     
     Select Case Index
-        Case Is = 0 'Prev'
+        Case Is = 0 'Prev
             MoveInMp3 (-1)
         Case Is = 1 'Play
             If mStreamIsPause Then
@@ -815,7 +815,7 @@ End If
     picSfondoSlide.Width = lnPosizione.X2 - lnPosizione.X1
     picSfondoSlide.BackColor = vbBlack
     
-    'Disegna linea della morte sonica, no cioe' la linea della slide
+    'Disegna linea della morte sonica, no cioe' la linea della slide / Draw the "line of sonic death" line, I mean the slide's line
     Call DrawOCenterLine(picSfondoSlide, RGB(206, 206, 206))
     PicPosizione.Width = 135 + 15
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -1024,7 +1024,7 @@ Private Sub ImgLogo_Click()
 End Sub
 
 Private Sub PicPosizione_MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)
-    'Disegna linea della morte sonica, no cioe' la linea della slide
+    'Disegna linea della morte sonica, no cioe' la linea della slide / Draw the "line of sonic death" line, I mean the slide's line
     SlideMove = True
     Call DrawOCenterLine(picSfondoSlide, vbGreen)
 End Sub
@@ -1058,7 +1058,7 @@ Private Sub PicPosizione_MouseUp(Button As Integer, Shift As Integer, X As Singl
 On Error GoTo ErrH
     SlideMove = False
     X = PicPosizione.Left - X
-    'Disegna linea della morte sonica, no cioe' la linea della slide
+    'Disegna linea della morte sonica, no cioe' la linea della slide / Draw the "line of sonic death" line, I mean the slide's line
     Call DrawOCenterLine(picSfondoSlide, RGB(206, 206, 206))
     
     gPosForSave.SamplePos = PosizioneSlide(X, picSfondoSlide.Width, mStreamLen)

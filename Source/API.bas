@@ -27,7 +27,7 @@ Public Declare Function waveOutGetDevCaps Lib "winmm.dll" Alias "waveOutGetDevCa
 
 Public Enum StandardIconEnum
     IDI_ASTERISK = 32516&       ' like vbInformation
-    IDI_EXCLAMATION = 32515&    ' like vbExlamation
+    IDI_EXCLAMATION = 32515&    ' like vbExclamation
     IDI_HAND = 32513&           ' like vbCritical
     IDI_QUESTION = 32514&       ' like vbQuestion
 End Enum
@@ -207,14 +207,14 @@ Private Const LWA_COLORKEY = 1
 Private Const LWA_ALPHA = 2
 Private Const WS_EX_LAYERED = &H80000
 
-'Rese Publiche xche usate in anche da fuori'
+'Rese Publiche xche usate anche da fuori' / Made public because also used from outside
 Public Declare Function SetWindowLong Lib "user32" Alias "SetWindowLongA" (ByVal hWnd As Long, ByVal nIndex As Long, ByVal dwNewLong As Long) As Long
 Public Declare Function GetWindowLong Lib "user32" Alias "GetWindowLongA" (ByVal hWnd As Long, ByVal nIndex As Long) As Long
 '''
 Private Declare Function SetLayeredWindowAttributes Lib "user32" (ByVal hWnd As Long, ByVal cKey As Long, ByVal bAlpha As Long, ByVal dwFlags As Long) As Long
 Private Declare Function GetVersion Lib "kernel32" () As Long
 
-'Noscosi le Scrolla Barre della listazza del listone
+'Nascosi le Scrolla Barre della listazza del listone / Hid the scrollbars of Listone's (big) list
 'Private Declare Function ShowScrollBar Lib "user32" (ByVal hWnd As Long, _
 '    ByVal wBar As Long, ByVal bShow As Long) As Long
 '
@@ -242,7 +242,7 @@ Private Declare Function GetSystemMetrics Lib "user32" (ByVal nIndex As Long) As
 Private Const SM_CXVSCROLL = 2
 Private Const SM_CXHSCROLL = 21
 '''
-'Rese Publiche xche usate anche da fuori'
+'Rese Publiche xche usate anche da fuori' / Made public because also used from outside
 Public Type RECT
   Left   As Long
   Top    As Long
@@ -478,7 +478,7 @@ End Function
 
 
 
-'Da estrarre e mette nelle globali'
+'Da estrarre e mette nelle globali' / To be extracted and moved into the globals
 Public Sub CreateShortcut(CSIDL As Long, NomeShort As String, TargetPath As String, _
                           Optional Parametro As String, Optional StartFolder As String, _
                           Optional IconNum As Integer, Optional IconPath As String, _

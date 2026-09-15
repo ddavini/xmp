@@ -116,7 +116,7 @@ Begin VB.Form frmPreference
       Begin VB.Label lblAssociazione 
          AutoSize        =   -1  'True
          BackStyle       =   0  'Transparent
-         Caption         =   "Associate With Follow Exstension"
+         Caption         =   "Associate With Following Extension"
          BeginProperty Font 
             Name            =   "Tahoma"
             Size            =   8.25

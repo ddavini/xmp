@@ -26,7 +26,7 @@ Private Type gPos
     Mp3File As String
 End Type
 
-'Costante numero massimo effetti per pulsante Shock su xmp
+'Costante numero massimo effetti per pulsante Shock su xmp / Constant: maximum number of effects for the Shock button on xmp
 Public Const MaxEffect = 3
 
 Public gb_OldProcMouseWheel As Long
@@ -36,7 +36,7 @@ Public AgganciatoFlag As Boolean
 Public Minimizzato As Boolean
 Public IndiceGlobalissimo As Integer
 Public STRM As Long
-'0 mono 1 stereo -1 Azzerato
+'0 mono 1 stereo -1 Azzerato / 0 mono, 1 stereo, -1 reset
 Public Modo As Integer
 Public GlobalSpectrumeMode As SpectrumeMode
 Public frmVisualizzazioniAttivo As Boolean

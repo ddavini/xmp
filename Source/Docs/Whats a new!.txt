@@ -2,25 +2,25 @@
 - Last Compiling
 
 09/10/2005 - Ver 1.0.376 Code Name Gamera
-- Otimize ScriviListaMp3
+- Optimize ScriviListaMp3
 - Add SAVEALS option
 
 15/08/2004 - Ver 1.0.371 Code Name Gamera
 
-- MH LCD apha test interface implemented 
+- MH LCD alpha test interface implemented 
 (require microhandler and LCD Hardware)
 - Header scan improved. Only Blood!...
-- Fixed IDTag v2 stream can't crete bug
+- Fixed IDTag v2 stream can't create bug
 - XTune No-Set Bug Solved
 - Rebuild of playdone function
 - Add XNorm TuneStep Value Setting
 - Monitor BR variations Option
 - RND 8 bit limitation bug fixed
-- Change startup and shutdown dislayed information
+- Change startup and shutdown displayed information
 
 17/09/2003 - Ver 1.0.370 RC3 Code Name Gamera
 
-- Now Rnd function remember the palyed stream
+- Now Rnd function remember the played stream
 - PlayDone at Open Stream Error bugfixed
 - New compiler option
 
@@ -36,7 +36,7 @@
 - Add XSound-Normalize features at xmMP3 
 - Changed duration visualization to min:sec
 - Add X Shortcut for enable XSound
-- Add XSound-Surround features at xmMP3 (Spazialized Sound)
+- Add XSound-Surround features at xmMP3 (Spatialized Sound)
 
 03/09/2003 - Ver 1.0.367 RCx Code Name Gamera
 
@@ -54,7 +54,7 @@
 - About Form Changed
 - Lost options on preference save bug fixed
 - Change Bitrate indicator to VBR when xmp play VBR MP3
-- Sounde Device Name Detection
+- Sound Device Name Detection
 - Displayed NumAudioDevice -1
 
 24/08/2003 - Ver 1.0.365 RC2 Code Name Gamera
@@ -101,15 +101,15 @@
 - Add some comment in INI file
 - Set Priority BugFixed
 - Bug Position scrollbar calculation on xmListBoX fixed
-- Bug Hok-Key and Arrow Key on xmlistBoX Hammered fixed
+- Bug Hot-Key and Arrow Key on xmlistBoX Hammered fixed
 - Bug RBM multi command line crash fixed
 
 15/08/2003 - Ver 1.0.359 x Code Name Gamera
 
 - Add SLIDEACCEL setting in the .INI file
 - Bug play do not stop when delete last mp3 fixed
-- Add Sperimental Mp3 VBR Support
-- Catastrofic Bug of def drive worng fixed
+- Add Experimental Mp3 VBR Support
+- Catastrophic Bug of def drive wrong fixed
 - xmList Scroll bar (big)bug fixed 
   (now xmSlide is integrated in xmList)
 - Open *.* file bug fixed
@@ -134,18 +134,18 @@
 10/08/2003 - Ver 1.0.357 x Code Name Gamera
 
 - WAN language bug fixed ;)
-- xmFFT code revision added Init API with adaptive getrage.
+- xmFFT code revision added Init API with adaptive getRange.
 
 09/08/2003 - Ver 1.0.355 RC1 Code Name Gamera
 
 - Little code revision for near release of RC1 :D
-- MH built in suppo removed. the mh support will be added 
+- MH built in support removed. The MH support will be added 
   in plugin format when display plugin will be implemented
 
 07/08/2003 - Ver 0.3.344 b 3 Vejita 
 
 - Bug File Not Found on Clear, on Cleared list, fixed
-- Add Controll Display Double Line.
+- Add Control Display Double Line.
 
 05/08/2003 - Ver 0.3.342 b 3 Vejita 
 
@@ -157,7 +157,7 @@
 
 - Little code revision of xmMP3
 - GetVersion API now is declared obsolete
-- Chage Version information of xmFFT and xmMP3 
+- Change Version information of xmFFT and xmMP3 
   (APL Standard)
 - Fix CardioOSC mono mode
 - Fix mode indicators always in stereo mode
@@ -188,7 +188,7 @@
 
 04/08/2002 - Ver 0.3.329 b 3 Vejita
 
-- Bug Icone Task Solved
+- Bug Icon Task Solved
 - Bug Selected stream play solved (concept bug)
 - Bug Add mp3 (Current Stream) solved
 - Add Quick Seek on Mp3 List
@@ -202,12 +202,12 @@
 
 19/07/2002 - Ver 0.3.325 b 3 Vejita
 
-- ls Save As steel error correct
+- ls Save As still error correct
 
 
 22/06/2002 - Ver 0.3.324 b 3 Vejita
 
-- Slive Bug Hammered solved
+- Slide Bug Hammered solved
 - Some Bug Fix 
 - Header Scan info Improved (i hope)
 
@@ -240,7 +240,7 @@
 
 26/03/2002 - Ver 0.2.306 b 2 Saiyan
 
-- Sperimental Version (xmMP3 1.67)
+- Experimental Version (xmMP3 1.67)
 - VBR Mp3
 - Header Scan Level Setting
 
@@ -255,8 +255,8 @@
 
 03/03/2002 - Ver 0.1.301 b 1 Epic
 
-- Problem Buffer too samll fix (xmMP3 1.65)
-- First Synch search Broblem fix (xmMP3 1.65)
+- Problem Buffer too small fix (xmMP3 1.65)
+- First Synch search Problem fix (xmMP3 1.65)
 - new xmFFT v1.1.0.1
 - new Spectrum 
 - Always Add Some Bug 
@@ -277,7 +277,7 @@
 - Lock Button Bug solved
 - Now Save EQ set
 - Quick Save now save all parameters
-- Save positione of Mp3 List 
+- Save position of Mp3 List 
 - Move all setting to XmP.ini
 - Swirl Erased
 - Add  Wav , MP1, MPA support (xmMP3 1.62)
@@ -291,20 +291,20 @@
 
 13/01/2002 - Ver 0.1.289 b 1 Epic
 
-- Cetralized the error control (Any error generate log)
+- Centralized the error control (Any error generate log)
 - Signalling active windows
 - xmMP3 Ver 1.61
-- xmFFT to small in dimension
+- xmFFT too small in dimension
 
 10/01/2002 - Ver 0.1.288 b 0 Rev
 
 - Next version will be a Beta 1
 - Some GUI improvements
-- Some Bux Fix
+- Some Bug Fix
 
 18/12/2001 - Ver 0.1.288 b-0 Rev
 
-- Enqueque Bug Fixed
+- Enqueue Bug Fixed
 - Display swirl Bug Fixed
 
 08/12/2001 - Ver 0.1.283 b-0 Rev
@@ -325,29 +325,29 @@
 16/9/2001 - Ver 0.1.280 b-0 Rev (Sperimental Version)
 
 - Add ID3v1 editor
-- Add CPU occupation couter (SMP)
+- Add CPU occupation counter (SMP)
 - Bug EQ Fixed
 - EQ is now in xmP Style
 - AP&L Tech v1.0
 
 09/9/2001 - Ver 0.1.272 b-0 Rev
 
-- See readme sor more info
+- See readme for more info
 - Bug DragFile Fixed
 - Bug Header read on bad Mp3 Fixed
 - EQ GUI improvements 
 - Some XmP GUI improvements 
 - Add Hide Button for MP3 List
 - SpeedUP Falls Fade
-- Remuved System HotKeys on NT4 and Win9x
+- Removed System HotKeys on NT4 and Win9x
 
 05/9/2001 - Ver 0.1.267 b-0 Rev
 
-- See readme sor more info
-- Many bug Bug Fixed
+- See readme for more info
+- Many Bugs Fixed
 - ShutDown Procedure improvements  
-- Decopression Engine Revised
-- Add Very EQ with Preset
+- Decompression Engine Revised
+- Add New EQ with Preset
 - Add xmFFT plug-in
 - Add Preference Menu
 
@@ -356,10 +356,10 @@
 - Bug VisMod Change Fixed
 - Bug CreateObject xmService Fixed
 - Bug System HotKeys Fixed
-- Bug DieciMillini Timer owerflow Fixed
+- Bug DieciMillini Timer overflow Fixed
 - Header Read Mp3 Modified (Get Byte Start 1)
 - Add local HotKeys 
-- Add self registration of xmServize
+- Add self registration of xmService
 
 15/8/2001 - Ver 0.1.227 b0 Kami
 - Bug Fix......doh!
@@ -368,11 +368,11 @@
 - Add back and pause in the menu tray
 - Add in the menu tray "center XmP and Link Mp3 List"
 - Add Info Tag Mp3
-- Spectur Analyzer FFT (xmFFT)
-- Spectur Analyzer FFT (Bass FFT)
-- Osclilloscope
+- Spectrum Analyzer FFT (xmFFT)
+- Spectrum Analyzer FFT (Bass FFT)
+- Oscilloscope
 - Add MThread Service
-- Sperimenta Support for HotKeys 
+- Experimental Support for HotKeys 
 - File Association Improvements
 - Remake of Mp3 List
 - Bug Mouse Scroll Fixed

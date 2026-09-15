@@ -54,7 +54,7 @@ Dim Response As VbMsgBoxResult
 On Error GoTo ErrH
     FF = FreeFile
     If Trim$(txtBox.Text) = "" Then
-        Response = MsgBox("The file is Empty, Are you sure that you want save thise file?", vbOKCancel)
+        Response = MsgBox("The file is empty. Are you sure you want to save this file?", vbOKCancel)
         If Response = vbCancel Then
             SaveFileINI = False
             Exit Function
