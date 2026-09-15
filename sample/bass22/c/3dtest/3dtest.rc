@@ -1,0 +1,48 @@
+#include "windows.h"
+#include "3dtest.h"
+
+1000 DIALOG DISCARDABLE  100, 100, 245, 165
+STYLE WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "BASS - 3D Test"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Channels (sample/music)",-1,5,0,110,127
+    LISTBOX         ID_LIST,10,9,100,51,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "Add ...",ID_ADD,10,65,48,12
+    PUSHBUTTON      "Remove",ID_REMOVE,62,65,48,12,WS_DISABLED
+    PUSHBUTTON      "Play",ID_PLAY,10,81,48,12,WS_DISABLED
+    PUSHBUTTON      "Stop",ID_STOP,62,81,48,12,WS_DISABLED
+    GROUPBOX        "Movement",-1,5,95,110,32
+    CONTROL         "Left",ID_LEFT,"Button",BS_AUTORADIOBUTTON | WS_DISABLED,
+                    10,103,28,10
+    CONTROL         "Right",ID_RIGHT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,45,103,33,10
+    CONTROL         "Front",ID_FRONT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,80,103,32,10
+    CONTROL         "Behind",ID_BEHIND,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,10,114,38,10
+    CONTROL         "None",ID_NONE,"Button",BS_AUTORADIOBUTTON | WS_DISABLED,
+                    80,114,33,10
+    GROUPBOX        "EAX environment",-1,5,130,110,30
+    COMBOBOX        ID_EAX,10,141,100,65,CBS_DROPDOWNLIST | WS_DISABLED | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Rolloff factor",-1,120,113,120,23
+    CONTROL         "",ID_ROLLOFF,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | 
+                    WS_TABSTOP,130,123,100,10
+    GROUPBOX        "Doppler factor",-1,120,137,120,23
+    CONTROL         "",ID_DOPPLER,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | 
+                    WS_TABSTOP,130,147,100,10
+    GROUPBOX        "",-1,120,0,120,111
+    LTEXT           "",ID_DISPLAY,125,9,109,96,SS_SUNKEN
+END
+
+2000 DIALOG DISCARDABLE  20, 20, 170, 60
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "BASS output device selector"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         ID_DEVLIST,5,5,160,35,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,100,44,60,12
+END

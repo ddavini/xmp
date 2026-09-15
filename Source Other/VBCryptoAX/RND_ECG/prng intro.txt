@@ -1,0 +1,16 @@
+Quick Intro to PRNG
+By: David Midkiff
+-------------------
+
+A PRNG (pseudo-random number generator) is an algorithm which attempts to generate an unpredictable random number on a computer. Since computers are entirely predictable logic machines it is nearly impossible to generate a real random number using math equations. This is why we call it a "pseudo" generator. "Pseudo" means deceitful. It may not be genuinely random but it comes darn close.
+
+To attempt to achieve genuine randomness on a computer we have to generate a random seed (number) to pass to a linear congruential equation. Many programmers blindly use a system timer as a seed for the congruential equation. While this appears to output random numbers it is completely predictable since a timer is always incrementing by one. A timer is a horrible source for randomness. What you need in a strong PRNG is a collection of sources which aren't predictable. The best unpredictable sources on a computer is the mouse position and keyboard delay/typing rate. Other good sources could be a bit grabbed at random from a file or memory location or even sound coming from the microphone. A good PRNG gathers several seemingly random sources (and also some predictable sources like timers) and combines them to form the final seed. This seed is then passed through a congruential equation to spit out a genuine random number.
+
+In cryptography a PRNG is used quite often in salt functions. If an algorithm uses a bad PRNG then someone could attack the cipher by attacking it's PRNG. This is how several college students cracked the Netscape crypto-security back in the early 90s. A PRNG NEEDS to be unpredictable. A genuinly random seed is all you need.
+
+
+Some congruential equations for those who care:
+
+Mixed: R(i+1) = (A * R(i) + B) Modulo M
+Multiplicative: R(i+1) = (A * R(i)) Modulo M
+Additive: R(i+1) = (R(i) + B) Modulo M

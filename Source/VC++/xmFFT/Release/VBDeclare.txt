@@ -1,0 +1,7 @@
+Private Declare Sub FFT Lib "xmFFT.dll" (ByVal Sample As Long, _
+    ByRef DataReal As Single, ByRef DataImg As Single, ByVal Barre As Long)
+
+Private Declare Sub InitxmFFT Lib "xmFFT.dll" Alias "Init" ()
+
+'Obsolete
+Public Declare Function GetxmFFTVersion Lib "xmFFT.dll" () As Long

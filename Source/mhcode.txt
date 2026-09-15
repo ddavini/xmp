@@ -1,0 +1,76 @@
+<xmp>
+
+Private Sub ctrlWsk_Connect()
+On Error GoTo ErrH
+        Select Case gb_MHACTIONS
+            Case Is = LOGIN
+                Call ctrlWsk.SendData("GET /default.mhd?action=login&appname=xmp" & vbCrLf & vbCrLf)
+            Case Is = LOGOUT
+                Call ctrlWsk.SendData("GET /default.mhd?action=logout&sessionid=" & gb_MHSESSIONID & vbCrLf & vbCrLf)
+            Case Is = SNDDATA
+                Call ctrlWsk.SendData("GET /default.mhd?action=senddata&sessionid=" & gb_MHSESSIONID & "&data=" & gb_MHDATA & "&datatype=" & gb_MHDATATYPE & vbCrLf & vbCrLf)
+            Case Is = SHOWUI
+                Call ctrlWsk.SendData("GET /default.mhd?action=sendcmd&sessionid=" & gb_MHSESSIONID & "&data=SHOWUI&datatype=0" & vbCrLf & vbCrLf)
+            Case Is = HIDEUI
+                Call ctrlWsk.SendData("GET /default.mhd?action=sendcmd&sessionid=" & gb_MHSESSIONID & "&data=HIDEUI&datatype=0" & vbCrLf & vbCrLf)
+        End Select
+ErrH:
+    If Err.Number <> 0 Then
+        DisplayError (Err.Number & vbCrLf & Err.Source & _
+                vbCrLf & "xmp.ctrlWsk_Connect" & vbCrLf & Err.Description)
+    End If
+End Sub
+
+Private Sub ctrlWsk_DataArrival(ByVal bytesTotal As Long)
+On Error GoTo ErrH
+    Dim sBuffer As String
+    
+    If bytesTotal > 0 Then
+        Call ctrlWsk.GetData(sBuffer, vbString)
+        
+        sBuffer = Mid$(sBuffer, InStr(sBuffer, vbCrLf & vbCrLf) + 4)
+        gb_MHRESPONS = sBuffer
+        
+    End If
+ErrH:
+    If Err.Number <> 0 Then
+        DisplayError (Err.Number & vbCrLf & Err.Source & _
+                vbCrLf & "xmp.ctrlWsk_DataArrival" & vbCrLf & Err.Description)
+    End If
+End Sub
+
+<xmp.UnSec.Timer>
+If mStreamPosInSeconds Mod 1 = 0 Then
+            Call modMicroHandler.SendCommand(SNDDATA, "ROWS=[same]|" & DurataStream(mStreamLenInSeconds - 				mStreamPosInSeconds))
+End If
+
+<modVariabiliGlobali>
+
+'''MH'''
+Public gb_MHRESPONS As String
+Public gb_MHACTIONS As m_Enum_MHAction
+Public gb_MHSESSIONID As Long
+Public gb_MHDATA As String
+Public gb_MHDATATYPE As Integer
+''''''''
+
+<modFunzioniGlobali.PlayStream>
+Call modMicroHandler.SendCommand(SNDDATA, "ROWS=" & .xmDisplay(0).xCaption + "|" + .Durata.Caption)
+
+
+<modFunzioniGlobali.Deload>
+'''
+frmListone.xmDInfo(0).xCaption "LogOUT from MH..."
+Call modMicroHandler.SendCommand(HIDEUI)
+Call modMicroHandler.SendCommand(LOGOUT)
+'''
+
+<modMain>
+
+If CBool(GetIni(cfgFile, "PREFERENCE", "MH", "FALSE")) Then
+        frmListone.xmDInfo(0).xCaption "LCD LogIN..."
+        Call modMicroHandler.SendCommand(LOGIN)
+        If Command$ = "/debug" Then
+            Call modMicroHandler.SendCommand(SHOWUI)
+        End If
+End If

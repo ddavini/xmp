@@ -1,0 +1,7 @@
+LIBRARY 		xmFFT
+DESCRIPTION      "FFT"
+
+EXPORTS
+	FFT	
+	GetxmFFTVersion
+	Init

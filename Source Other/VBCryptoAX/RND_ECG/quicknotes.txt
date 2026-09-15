@@ -1,0 +1,9 @@
+Notes and Updated for ECG
+By: David Midkiff <mdj2023@hotmail.com>
+---------------------------------------
+
+I implemented a Hash algorithm of my own design which outputs an 80-bit message digest from an input stream. The Hash is fast and small but not as secure as MD5 and SHA. That doesn't matter since all I use the hash for is producing a hash value to use as a seed. The Hash algorithm is only intended for use in ECG. You need my permission to use it elsewhere.
+
+To implement ECG simply call the RandomNumber function in the class and pass a lower bound variable and an upper bound variable. The return is a double variable with the resulting random number. There is also a function included for genereating random strings. Simply pass it the string length and it will spit out a random string of that size.
+
+Thanks to William Rawls (william.rawls@verizon.com) for excellent suggestions concerning the inclusion of GUID as a unique seed in ECG.

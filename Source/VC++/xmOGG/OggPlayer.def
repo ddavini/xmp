@@ -1,0 +1,11 @@
+EXPORTS
+
+TerminateOgg
+InitOgg
+PlayOggFile
+OggIsPlaying
+StopOgg
+UpdateOgg
+CloseOgg
+SetOggVolume
+SetOggPan

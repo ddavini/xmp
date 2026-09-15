@@ -1,0 +1,56 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "mp3dec"="..\mp3dec\mp3dec.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/mp3dec", PCAAAAAA
+    ..\mp3dec
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "xmMP3"=".\xmMP3.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/xmMP3", MCAAAAAA
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name mp3dec
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+    begin source code control
+    "$/xmMP3", MCAAAAAA
+    .
+    end source code control
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

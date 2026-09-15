@@ -1,0 +1,14 @@
+<html>
+<head>
+<title></title>
+<LINK REL="stylesheet" HREF="mh.css">
+</head>
+<body bgcolor=black text="#66FF00">
+<pre>
+[<a href=".\log.mhd?action=app_readtxt&data=C:\Program Files\XmP\logs\[date].log" target=log>Refresh</a>]
+
+<font face=system>[txt]</font>
+</pre>
+</body>
+
+</html>

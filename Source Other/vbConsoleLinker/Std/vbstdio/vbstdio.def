@@ -1,0 +1,7 @@
+LIBRARY 		VBSTDIO
+DESCRIPTION      "stdio for VB"
+
+EXPORTS
+	vbprintf
+	vbclrscr
+	vbsetcmdcursorposition

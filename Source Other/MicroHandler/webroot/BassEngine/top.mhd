@@ -1,0 +1,13 @@
+<html>
+<head>
+<title></title>
+<LINK REL="stylesheet" HREF="mh.css">
+</head>
+<body bgcolor=black text="#66FF00">
+<meta http-equiv="Refresh" content="60; URL=".\top.mhd?action=app_readls&data=[sepath]\mp3.ls"">
+<pre>
+<font face=system>[readls]</font>   [<a href=".\top.mhd?action=app_readls&data=[sepath]\mp3.ls" target=top>Refresh</a>]
+</pre>
+</body>
+
+</html>
